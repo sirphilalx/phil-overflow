@@ -1,4 +1,4 @@
-import Theme from "@/app/(root)/(home)/Theme";
+import Theme from "@/components/shared/navbar/Theme";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
