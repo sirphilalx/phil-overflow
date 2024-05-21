@@ -71,3 +71,75 @@ export const BADGE_CRITERIA = {
     GOLD: 100000,
   },
 };
+
+export const hotNews = [
+  {
+    id: 1,
+    question:
+      "Would it be appropriate to point out an error in another paper during a referee report?",
+    image: "/assets/icons/chevron-right.svg",
+  },
+  {
+    id: 2,
+    question: "How can an airconditioning machine exist?",
+    image: "/assets/icons/chevron-right.svg",
+  },
+  {
+    id: 3,
+    question: "Interrogated every time crossing UK Border as citizen",
+    image: "/assets/icons/chevron-right.svg",
+  },
+  {
+    id: 4,
+    question: "Low digit addition generator",
+    image: "/assets/icons/chevron-right.svg",
+  },
+  {
+    id: 5,
+    question: "What is an example of 3 numbers that do not make up a vector?",
+    image: "/assets/icons/chevron-right.svg",
+  },
+];
+
+export const tags = [
+  {
+    id: 1,
+    tag: "javascript",
+    totalQuestions: 20152,
+  },
+  {
+    id: 2,
+    tag: "NextJS",
+    totalQuestions: 20152,
+  },
+  {
+    id: 3,
+    tag: "Reactjs",
+    totalQuestions: 20152,
+  },
+  {
+    id: 4,
+    tag: "nodejs",
+    totalQuestions: 20152,
+  },
+  {
+    id: 5,
+    tag: "python",
+    totalQuestions: 20152,
+  },
+  {
+    id: 6,
+    tag: "microsoft azure",
+    totalQuestions: 20152,
+  },
+  {
+    id: 7,
+    tag: "postgres sql",
+    totalQuestions: 20152,
+  },
+  {
+    id: 8,
+    tag: "machine learning",
+    totalQuestions: 20152,
+  },
+];
