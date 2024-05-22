@@ -2,7 +2,7 @@ import { hotNews, tags } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import RenderedTag from "../shared/RenderedTag";
+import RenderedTag from "../RenderedTag";
 
 const RightSidebar = () => {
   return (
