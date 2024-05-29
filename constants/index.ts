@@ -103,42 +103,42 @@ export const hotNews = [
 
 export const tags = [
   {
-    id: 1,
+    id: "1",
     tag: "javascript",
     totalQuestions: 20152,
   },
   {
-    id: 2,
+    id: "2",
     tag: "NextJS",
     totalQuestions: 20152,
   },
   {
-    id: 3,
+    id: "3",
     tag: "Reactjs",
     totalQuestions: 20152,
   },
   {
-    id: 4,
+    id: "4",
     tag: "nodejs",
     totalQuestions: 20152,
   },
   {
-    id: 5,
+    id: "5",
     tag: "python",
     totalQuestions: 20152,
   },
   {
-    id: 6,
+    id: "6",
     tag: "microsoft azure",
     totalQuestions: 20152,
   },
   {
-    id: 7,
+    id: "7",
     tag: "postgres sql",
     totalQuestions: 20152,
   },
   {
-    id: 8,
+    id: "8",
     tag: "machine learning",
     totalQuestions: 20152,
   },

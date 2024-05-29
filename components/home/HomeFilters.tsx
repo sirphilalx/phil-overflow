@@ -4,7 +4,7 @@ import React from "react";
 import { Button } from "../ui/button";
 
 const HomeFilters = () => {
-  const isActive = "newest";
+  const isActive = "unanswered";
   return (
     <div className="mt-10 flex-wrap gap-3 md:flex">
       {HomePageFilters.map((item) => (
