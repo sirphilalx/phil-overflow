@@ -21,6 +21,7 @@ import { Input } from "@/components/ui/input";
 import { questionsSchema } from "@/lib/validations";
 import { Badge } from "../ui/badge";
 import Image from "next/image";
+import { createQuestion } from "@/lib/actions/question.action";
 
 const type: any = "create";
 
@@ -39,9 +40,10 @@ const Question = () => {
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof questionsSchema>) {
+  async function onSubmit(values: z.infer<typeof questionsSchema>) {
     setIsSubmitting(true);
     try {
+      await createQuestion({});
     } catch (error) {
     } finally {
       setIsSubmitting(false);
@@ -127,6 +129,8 @@ const Question = () => {
                     // @ts-ignore
                     editorRef.current = editor;
                   }}
+                  onBlur={field.onBlur}
+                  onEditorChange={(content) => field.onChange(content)}
                   initialValue=""
                   init={{
                     height: 350,
@@ -217,13 +221,13 @@ const Question = () => {
         />
         <Button
           type="submit"
-          className="primary-gradient w-fit !text-light-500"
+          className="primary-gradient w-fit !text-light-900"
           disabled={isSubmitting}
         >
           {isSubmitting ? (
-            <>{type === "edit" ? "editing..." : "posting"}</>
+            <>{type === "edit" ? "editing..." : "posting..."}</>
           ) : (
-            <>{type === "edit" ? "Edit Questions" : "Ask a question"}</>
+            <>{type === "edit" ? "Edit Question" : "Ask a question"}</>
           )}
         </Button>
       </form>
