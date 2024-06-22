@@ -5,51 +5,13 @@ import NoResults from "@/components/shared/noresults/NoResults";
 import LocalSearchbar from "@/components/shared/search/LocalSearchbar";
 import { Button } from "@/components/ui/button";
 import { HomePageFilters } from "@/constants/filters";
+import { GetQuestions } from "@/lib/actions/question.action";
 import Link from "next/link";
 import React from "react";
 
-const questions = [
-  {
-    _id: "1",
-    title: "Cascading Delete in SQLAlchemy",
-    tags: [
-      { _id: "1", name: "python" },
-      { _id: "2", name: "sql" },
-      { _id: "3", name: "mongodb" },
-      { _id: "4", name: "Aora" },
-    ],
-    author: {
-      _id: "1",
-      name: "John Doe",
-      picture: "https://example.com/johndoe.jpg",
-    },
-    upvotes: 12345678,
-    views: 100,
-    answers: [{}, {}],
-    createdAt: new Date("2024-02-01T10:00:00Z"),
-  },
-  {
-    _id: "2",
-    title: "How to Center a Div",
-    tags: [
-      { _id: "1", name: "python" },
-      { _id: "2", name: "sql" },
-      { _id: "3", name: "mongodb" },
-      { _id: "4", name: "css" },
-    ],
-    author: {
-      _id: "1",
-      name: "John Doe",
-      picture: "https://example.com/johndoe.jpg",
-    },
-    upvotes: 500002,
-    views: 100,
-    answers: [{}, {}],
-    createdAt: new Date("2023-05-02T15:30:00Z"),
-  },
-];
-
-const page = () => {
+const page = async () => {
+  const result = await GetQuestions({});
+  console.log(result.questions);
   return (
     <>
       <div className="flex w-full flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
@@ -78,8 +40,8 @@ const page = () => {
       <HomeFilters />
 
       <div className="mt-10 flex w-full flex-col gap-6">
-        {questions.length > 0 ? (
-          questions.map((question) => (
+        {result.questions.length > 0 ? (
+          result.questions.map((question) => (
             <QuestionCard
               key={question._id}
               _id={question._id}
